@@ -12,4 +12,8 @@ homeRouter.get('/generate', function (req, res, next) {
     res.render('generator.ejs', {});
 });
 
+homeRouter.post('/transform', function (req, res, next) {
+    res.render('result.ejs', {});
+});
+
 export default homeRouter;
