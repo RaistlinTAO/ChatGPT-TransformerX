@@ -2,12 +2,19 @@ import express from "express";
 import Utils from "../utils/index.js";
 import Routes from "../routes/index.js";
 import path from "path";
+import session from "express-session";
 
 class _ExpressService {
     initialBackend() {
         let app = express();
         app.set('views', path.join(path.resolve("./"), '/views'));
         app.set('view engine', 'ejs');
+        app.use(session({
+            secret: 'GPT', resave: false, saveUninitialized: true, cookie: {
+                //secure: false, httpOnly: true, expires: new Date(Date.now() + 2 * 60 * 60 * 1000)
+                secure: false, httpOnly: true, maxAge: 2 * 60 * 60 * 1000
+            }
+        }))
         app.use(express.json());
         app.use(express.urlencoded({extended: false}));
         app.use("/", express.static(path.join(path.resolve("./"), '/public')));
