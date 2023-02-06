@@ -19,17 +19,24 @@ homeRouter.post('/transform', async function (req, res, next) {
         apiKey: process.env.OPENAI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
-    let response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: req.body.keywords,
-        temperature: 0,
-        max_tokens: 3900,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-    });
-    console.log(response)
-    req.session.resultStr = response.data.choices[0].text;
+    try {
+        let response = await openai.createCompletion({
+            model: "text-davinci-003",
+            prompt: req.body.keywords,
+            temperature: parseFloat(req.body.temperature),
+            max_tokens: 3000,
+            top_p: parseFloat(req.body.top_p),
+            frequency_penalty: 0,
+            presence_penalty: 0,
+        });
+        console.log(response)
+
+        req.session.resultStr = response.data.choices[0].text;
+    } catch (e) {
+        console.log(e)
+        req.session.resultStr = e.message
+    }
+
     res.redirect('/result');
 });
 

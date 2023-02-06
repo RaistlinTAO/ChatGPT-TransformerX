@@ -92,7 +92,7 @@
 											</span>
                                             <!--end::Svg Icon-->
 										</span>
-										<span class="menu-title">控制面板</span>
+										<span class="menu-title">Dashboard</span>
 									</span>
                             <!--end:Menu link-->
                         </div>
@@ -115,7 +115,7 @@
 											</span>
                                             <!--end::Svg Icon-->
 										</span>
-										<span class="menu-title">帮助文档</span>
+										<span class="menu-title">Help</span>
 										<span class="menu-arrow"></span>
 									</span>
                             <!--end:Menu link-->
@@ -628,7 +628,7 @@
                                  aria-controls="kt_account_profile_details">
                                 <!--begin::Card title-->
                                 <div class="card-title m-0">
-                                    <h3 class="fw-bold m-0">生成器设置</h3>
+                                    <h3 class="fw-bold m-0">API Setting</h3>
                                 </div>
                                 <!--end::Card title-->
                             </div>
@@ -644,9 +644,10 @@
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                            <input type="text" name="company"
+                                            <input type="number" name="temperature"
                                                    class="form-control form-control-lg form-control-solid"
-                                                   placeholder="Company name" value="Keenthemes">
+                                                   placeholder="The temperature setting in GPT-3 controls the level of randomness or creativity in the generated text"
+                                                   value="0">
                                             <div class="fv-plugins-message-container invalid-feedback"></div>
                                         </div>
                                         <!--end::Col-->
@@ -656,33 +657,15 @@
                                     <div class="row mb-6">
                                         <!--begin::Label-->
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Contact Phone</span>
-                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
-                                               aria-label="Phone number must be active"
-                                               data-bs-original-title="Phone number must be active"
-                                               data-kt-initialized="1"></i>
+                                            <span class="required">top_p</span>
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row fv-plugins-icon-container">
-                                            <input type="tel" name="phone"
+                                            <input type="number" name="top_p"
                                                    class="form-control form-control-lg form-control-solid"
-                                                   placeholder="Phone number" value="044 3276 454 935">
+                                                   placeholder="Distribution of probably of common tokens" value="1">
                                             <div class="fv-plugins-message-container invalid-feedback"></div>
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-6">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Company Site</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8 fv-row">
-                                            <input type="text" name="website"
-                                                   class="form-control form-control-lg form-control-solid"
-                                                   placeholder="Company website" value="keenthemes.com">
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -700,7 +683,7 @@
                                     <img src="assets/media/avatars/300-3.jpg" class="" alt="">
                                 </div>
                                 <!--end::Photo-->
-                                <span class="text-gray-400 fw-semibold fs-6">用一句话简短的概况你要生成的内容</span>
+                                <span class="text-gray-400 fw-semibold fs-6">Type your keywords here, for example: Write an essay about Game theory, around 300 words</span>
                             </div>
                             <!--end::Header-->
                             <!--begin::Body-->
