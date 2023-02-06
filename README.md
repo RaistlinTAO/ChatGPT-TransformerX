@@ -1,5 +1,5 @@
 # ChatGPT TransformerX
-A nodejs Express website for text completion using ChatGPT
+A nodejs Express website for text completion using ChatGPT, the project contains the HTML template of Metronic DEMO 3,  suitable as the basic template for any text completion project startup
 
 ## Use ChatGPT for Text Completion
 
