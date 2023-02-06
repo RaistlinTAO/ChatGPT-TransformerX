@@ -624,69 +624,71 @@
                         <div class="card mb-5 mb-xl-10">
                             <!--begin::Card header-->
                             <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
-                                 data-bs-target="#kt_account_email_preferences" aria-expanded="true"
-                                 aria-controls="kt_account_email_preferences">
+                                 data-bs-target="#kt_account_profile_details" aria-expanded="true"
+                                 aria-controls="kt_account_profile_details">
+                                <!--begin::Card title-->
                                 <div class="card-title m-0">
-                                    <h3 class="fw-bold m-0">生成器选项</h3>
+                                    <h3 class="fw-bold m-0">生成器设置</h3>
                                 </div>
+                                <!--end::Card title-->
                             </div>
                             <!--begin::Card header-->
                             <!--begin::Content-->
-                            <div id="kt_account_settings_email_preferences" class="collapse show">
-
+                            <div id="kt_account_settings_profile_details" class="collapse show">
                                 <!--begin::Card body-->
-                                <div class="card-body border-top px-9 py-9">
-                                    <!--begin::Option-->
-                                    <label class="form-check form-check-custom form-check-solid align-items-start">
-                                        <!--begin::Input-->
-                                        <input class="form-check-input me-3" type="checkbox" name="email-preferences[]"
-                                               value="1"/>
-                                        <!--end::Input-->
+                                <div class="card-body border-top p-9">
+                                    <!--begin::Input group-->
+                                    <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <span class="form-check-label d-flex flex-column align-items-start">
-													<span class="fw-bold fs-5 mb-0">Successful Payments</span>
-													<span class="text-muted fs-6">Receive a notification for every successful payment.</span>
-												</span>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Temperature</label>
                                         <!--end::Label-->
-                                    </label>
-                                    <!--end::Option-->
-                                    <!--begin::Option-->
-                                    <div class="separator separator-dashed my-6"></div>
-                                    <!--end::Option-->
-                                    <!--begin::Option-->
-                                    <label class="form-check form-check-custom form-check-solid align-items-start">
-                                        <!--begin::Input-->
-                                        <input class="form-check-input me-3" type="checkbox" name="email-preferences[]"
-                                               checked="checked" value="1"/>
-                                        <!--end::Input-->
+                                        <!--begin::Col-->
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <input type="text" name="company"
+                                                   class="form-control form-control-lg form-control-solid"
+                                                   placeholder="Company name" value="Keenthemes">
+                                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <span class="form-check-label d-flex flex-column align-items-start">
-													<span class="fw-bold fs-5 mb-0">Payouts</span>
-													<span class="text-muted fs-6">Receive a notification for every initiated payout.</span>
-												</span>
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                                            <span class="required">Contact Phone</span>
+                                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+                                               aria-label="Phone number must be active"
+                                               data-bs-original-title="Phone number must be active"
+                                               data-kt-initialized="1"></i>
+                                        </label>
                                         <!--end::Label-->
-                                    </label>
-                                    <!--end::Option-->
-                                    <!--begin::Option-->
-                                    <div class="separator separator-dashed my-6"></div>
-                                    <!--end::Option-->
-                                    <!--begin::Option-->
-                                    <label class="form-check form-check-custom form-check-solid align-items-start">
-                                        <!--begin::Input-->
-                                        <input class="form-check-input me-3" type="checkbox" name="email-preferences[]"
-                                               value="1"/>
-                                        <!--end::Input-->
+                                        <!--begin::Col-->
+                                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                            <input type="tel" name="phone"
+                                                   class="form-control form-control-lg form-control-solid"
+                                                   placeholder="Phone number" value="044 3276 454 935">
+                                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <span class="form-check-label d-flex flex-column align-items-start">
-													<span class="fw-bold fs-5 mb-0">Fee Collection</span>
-													<span class="text-muted fs-6">Receive a notification each time you collect a fee from sales</span>
-												</span>
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Company Site</label>
                                         <!--end::Label-->
-                                    </label>
-                                    <!--end::Option-->
+                                        <!--begin::Col-->
+                                        <div class="col-lg-8 fv-row">
+                                            <input type="text" name="website"
+                                                   class="form-control form-control-lg form-control-solid"
+                                                   placeholder="Company website" value="keenthemes.com">
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
                                 </div>
                                 <!--end::Card body-->
-
                             </div>
                             <!--end::Content-->
                         </div>
