@@ -1,22 +1,22 @@
 # ChatGPT TransformerX
 
-A nodejs Express website for text completion using ChatGPT, the project contains the HTML template of Metronic DEMO 3,
-suitable as the basic template for any text completion project startup
+使用ChatGPT的 Node Express 网站模板。作为示例页面引擎为EJS，可以自己切换成VUE或者Node.JS。
+可以用于类似项目的起始模板
 
 ![Code Size](https://img.shields.io/github/languages/code-size/raistlintao/ChatGPT-TransformerX)
 ![Repo Size](https://img.shields.io/github/repo-size/RaistlinTAO/ChatGPT-TransformerX)
 
-English | [中文文档](README_ZH.md)
+[English](README.md) | 中文文档
 
-## Use ChatGPT for Text Completion
+## 使用ChatGPT作为文章的生成
 
-In generator page, simply type your keywords and get the result, for example
+在生成页面的对话框中输入你需要的关键字，中英文都可以。
 
 ```text
 Write an essay about Game theory, around 300 words
 ```
 
-Then the result page will show the result from ChatGPT:
+在结果页面会显示由ChatGPT生成的结果
 
 Game theory is a branch of mathematics that studies strategic decision making. It is used to analyze interactions
 between two or more decision makers, or “players”, who must make choices that affect each other. Game theory is used in
@@ -37,38 +37,35 @@ analyzing strategic decision making. It can be used to analyze a variety of diff
 markets to video games. By understanding the behavior of players, game theory can help players make better decisions and
 increase their chances of success.
 
-## Configuration
+## 配置
 
 - 0 环境配置
-
 ```cmd
 npm install
 ```
-
-- 1 Copy .env.example to .env
+- 1 复制 .env.example 到 .env
 
 ```text
-# SERVER CONFIGURATION
+# 服务器设置
 SERVER_BACKEND_PORT=2001 # Server HTTP Port
 SERVER_HTTPS=false
 SERVER_KEY=''
 SERVER_CERT=''
 
 
-# CONSOLE OPTION
+# 测试配置
 PRINT_DEBUG=true
 PRINT_STACK_DETAIL=true
 
-# CHAT GPT API
+# CHAT GPT API，
 OPENAI_API_KEY=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 # Your API KEY
 ```
 
-- 2 Change the OPENAI_API_KEY with your own APIKEY in .env File
+- 2 在.env中更换OPENAI_API_KEY=后面的内容为你的API密钥
 
-- 3 Run Server
+- 3 运行Node
 
 ```text
 Node APP.JS
 
-or use PM2 to execute node app
 ```
